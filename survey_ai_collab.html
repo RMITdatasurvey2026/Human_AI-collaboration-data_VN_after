@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-script-url" content="">
+    <meta name="admin-password-hash" content="6051fc84a7a0d74c225fb18a496b09952da5642e60723ecae543298edd7d82d6">
+    <title>Khảo sát – Sự hợp tác giữa Con người và AI trong Doanh nghiệp</title>
+    <script>
+    window.SURVEY_CONFIG = {
+        storageKey:    'survey_ai_collab',
+        spreadsheetId: '',
+        orgBadge:        'VIN UNIVERSITY – RMIT VIETNAM',
+        headerTitle:     'KHẢO SÁT SỰ HỢP TÁC GIỮA CON NGƯỜI VÀ TRÍ TUỆ NHÂN TẠO TRONG DOANH NGHIỆP',
+        headerDetail:    'Khảo sát về Sự hợp tác giữa Con người và AI trong Môi trường Doanh nghiệp',
+        headerSubtitle:  'Chúng tôi là nhóm nghiên cứu đến từ VinUniversity và RMIT University Vietnam. Mời Anh/Chị điền vào bảng câu hỏi sau. Phản hồi của Anh/Chị là vô cùng quan trọng đối với chúng tôi.',
+        banner:          'human-and-AI-collaboration_EDIT.jpg',
+        showEmail:                true,
+        requireEmail:             true,
+        emailLabel:               'Email:',
+        emailPlaceholder:         'example@email.com',
+        showCompanyName:          true,
+        requireCompanyName:       true,
+        companyNameLabel:         'Tên công ty / Tổ chức:',
+        companyNamePlaceholder:   'Nhập tên công ty hoặc tổ chức...',
+        dateLabel:                'Ngày khảo sát:',
+        showDate:                 true,
+        showCustomQuestionsAdmin: true,
+        requireConsent:           true,
+        requiredMessage:          'Vui lòng trả lời tất cả các câu hỏi bắt buộc.',
+        submitLabel:   '✓  Gửi KHẢO SÁT',
+        thankYouTitle: 'CẢM ƠN ANH/CHỊ RẤT NHIỀU!',
+        thankYouBody:  'Phản hồi của bạn đã được ghi nhận thành công.<br>Dữ liệu sẽ được sử dụng phục vụ nghiên cứu.',
+        introBox: {
+            title: 'PHẦN I: GIỚI THIỆU NGHIÊN CỨU VÀ BỐI CẢNH',
+            html: `<p><strong>(A) Giới thiệu</strong></p>
+<p>Kính gửi Anh/Chị,</p>
+<p>Chúng tôi là nhóm nghiên cứu đến từ VinUniversity và RMIT University Vietnam, hiện đang thực hiện một nghiên cứu học thuật về <strong>Sự hợp tác giữa Con người và Trí tuệ Nhân tạo (AI)</strong> trong môi trường tổ chức và doanh nghiệp.</p>
+<p>Nghiên cứu này nhằm khám phá cách nhân viên và tổ chức đang ứng dụng các công nghệ AI trong công việc hàng ngày, cũng như cách con người tương tác, cộng tác và ra quyết định cùng với AI trong bối cảnh chuyển đổi số và tiến bộ công nghệ nhanh chóng.</p>
+<p><strong>(B) Bảo mật và Cam kết</strong></p>
+<p>Khảo sát này được thực hiện hoàn toàn vì mục đích học thuật. Không có câu trả lời đúng hay sai. Mọi thông tin thu thập sẽ được bảo mật và chỉ sử dụng cho mục đích nghiên cứu. Dữ liệu sẽ được phân tích tổng hợp và không có thông tin cá nhân nào bị tiết lộ.</p>
+<p>Mọi phản hồi hoặc câu hỏi, vui lòng liên hệ GS. Hong Bui tại <a href="mailto:Hong.btm@vinuni.edu.vn">Hong.btm@vinuni.edu.vn</a></p>`
+        },
+        sections: [
+            {type:'demographics',id:'info',sectionLabel:'PHẦN I',title:'THÔNG TIN CƠ BẢN',
+             questions:[
+              {id:'q_info_1',required:true,text:'Giới tính',type:'radio',layout:3,
+               options:[{value:'Nam',label:'Nam'},{value:'Nữ',label:'Nữ'},{value:'Khác',label:'Khác'}]},
+              {id:'q_info_2',required:true,text:'Độ tuổi',type:'number',min:18,step:1,placeholder:'Ví dụ: 25 (tối thiểu 18)'},
+              {id:'q_info_3',required:true,text:'Chức vụ hiện tại của Anh/Chị trong tổ chức là gì?',type:'radio',layout:3,
+               options:[
+                {value:'Giám đốc điều hành (CEO)',label:'Giám đốc điều hành (CEO)'},
+                {value:'Giám đốc tài chính (CFO)',label:'Giám đốc tài chính (CFO)'},
+                {value:'Giám đốc công nghệ (CTO)',label:'Giám đốc công nghệ (CTO)'},
+                {value:'Giám đốc marketing (CMO)',label:'Giám đốc marketing (CMO)'},
+                {value:'Giám đốc nhân sự (CHRO)',label:'Giám đốc nhân sự (CHRO)'},
+                {value:'Giám đốc thông tin (CIO)',label:'Giám đốc thông tin (CIO)'},
+                {value:'Trưởng phòng / Quản lý',label:'Trưởng phòng / Quản lý'},
+                {value:'Nhân viên',label:'Nhân viên'},
+                {value:'Khác',label:'Khác:'}],
+               otherField:{name:'q_info_3_other',placeholder:'Vui lòng ghi rõ...'}},
+              {id:'q_info_4',required:true,text:'Lĩnh vực hoạt động chính của doanh nghiệp/tổ chức nơi Anh/Chị đang làm việc là gì?',type:'radio',layout:2,
+               options:[
+                {value:'Hậu cần / Quản trị chuỗi cung ứng',label:'Hậu cần / Quản trị chuỗi cung ứng'},
+                {value:'Sản xuất và Công nghiệp',label:'Sản xuất và Công nghiệp'},
+                {value:'Công nghệ thông tin và Viễn thông',label:'Công nghệ thông tin và Viễn thông'},
+                {value:'Bán lẻ và Hàng tiêu dùng',label:'Bán lẻ và Hàng tiêu dùng'},
+                {value:'Tài chính và Ngân hàng',label:'Tài chính và Ngân hàng'},
+                {value:'Giáo dục',label:'Giáo dục'},
+                {value:'Chăm sóc sức khỏe và Dược phẩm',label:'Chăm sóc sức khỏe và Dược phẩm'},
+                {value:'Xây dựng / Công trình',label:'Xây dựng / Công trình'},
+                {value:'Khác',label:'Khác:'}],
+               otherField:{name:'q_info_4_other',placeholder:'Vui lòng ghi rõ...'}},
+              {id:'q_info_5',required:true,text:'Doanh nghiệp của Anh/Chị có khoảng bao nhiêu nhân sự?',type:'radio',layout:2,
+               options:[
+                {value:'1 - 49 nhân sự',label:'1 – 49 nhân sự'},
+                {value:'50 - 249 nhân sự',label:'50 – 249 nhân sự'},
+                {value:'250 - 999 nhân sự',label:'250 – 999 nhân sự'},
+                {value:'1000+ nhân sự',label:'1000+ nhân sự'}]},
+              {id:'q_info_6',required:true,text:'Doanh nghiệp Anh/Chị có doanh thu hàng năm khoảng bao nhiêu?',type:'radio',layout:2,
+               options:[
+                {value:'Dưới 3 tỷ VND',label:'Dưới 3 tỷ VND'},
+                {value:'Từ 3 tỷ đến 50 tỷ VND',label:'Từ 3 tỷ đến 50 tỷ VND'},
+                {value:'Từ 50 tỷ đến 300 tỷ VND',label:'Từ 50 tỷ đến 300 tỷ VND'},
+                {value:'Trên 300 tỷ VND',label:'Trên 300 tỷ VND'},
+                {value:'Khác',label:'Khác:'}],
+               otherField:{name:'q_info_6_other',placeholder:'Vui lòng ghi rõ...'}},
+              {id:'q_info_7',required:true,text:'Doanh nghiệp của Anh/Chị đã hoạt động được khoảng bao nhiêu năm?',type:'number',min:1,step:1,placeholder:'Ví dụ: 5 (năm)'},
+              {id:'q_info_8',required:true,text:'Anh/Chị đã làm việc trong tổ chức hiện tại được bao lâu?',type:'number',min:1,step:1,placeholder:'Ví dụ: 3 (năm)'},
+              {id:'q_info_9',required:true,text:'Doanh nghiệp/tổ chức của Anh/Chị hiện đang ứng dụng AI ở mức độ nào?',type:'radio',layout:'column',
+               options:[
+                {value:'Chưa sử dụng AI',label:'Chưa sử dụng AI'},
+                {value:'Đang thử nghiệm AI ở quy mô nhỏ',label:'Đang thử nghiệm AI ở quy mô nhỏ'},
+                {value:'Sử dụng AI trong một số phòng ban / chức năng',label:'Sử dụng AI trong một số phòng ban / chức năng'},
+                {value:'Sử dụng AI rộng rãi trong toàn doanh nghiệp',label:'Sử dụng AI rộng rãi trong toàn doanh nghiệp'},
+                {value:'AI đã được tích hợp sâu vào quy trình vận hành',label:'AI đã được tích hợp sâu vào quy trình vận hành và ra quyết định'}]},
+              {id:'q_info_10',required:false,text:'Doanh nghiệp/tổ chức của Anh/Chị chủ yếu ứng dụng AI trong lĩnh vực hoặc hoạt động nào?',type:'checkbox',layout:2,
+               checkboxNote:'Có thể chọn nhiều đáp án',
+               options:[
+                {value:'Phân tích dữ liệu và báo cáo',label:'Phân tích dữ liệu và báo cáo'},
+                {value:'Tự động hóa quy trình làm việc',label:'Tự động hóa quy trình làm việc'},
+                {value:'Chăm sóc khách hàng',label:'Chăm sóc khách hàng'},
+                {value:'Marketing và sáng tạo nội dung',label:'Marketing và sáng tạo nội dung'},
+                {value:'Logistics và chuỗi cung ứng',label:'Logistics và chuỗi cung ứng'},
+                {value:'Quản trị nhân sự',label:'Quản trị nhân sự'},
+                {value:'Hỗ trợ ra quyết định quản lý',label:'Hỗ trợ ra quyết định quản lý'},
+                {value:'Nghiên cứu và phát triển (R&D)',label:'Nghiên cứu và phát triển (R&D)'},
+                {value:'Kiểm soát chất lượng / vận hành',label:'Kiểm soát chất lượng / vận hành'},
+                {value:'Khác',label:'Khác:'}],
+               otherField:{name:'q_info_10_other',placeholder:'Vui lòng ghi rõ...'}},
+              {id:'q_info_11',required:true,text:'Anh/Chị đã sử dụng các công cụ AI trong bao lâu?',type:'number',min:1,step:1,placeholder:'Ví dụ: 2 (năm)'},
+              {id:'q_info_12',required:false,text:'Anh/Chị thường sử dụng những công cụ AI nào trong công việc?',type:'checkbox',layout:3,
+               checkboxNote:'Có thể chọn nhiều đáp án',
+               options:[
+                {value:'ChatGPT',label:'ChatGPT'},
+                {value:'Gemini',label:'Gemini'},
+                {value:'Claude',label:'Claude'},
+                {value:'Microsoft Copilot',label:'Microsoft Copilot'},
+                {value:'Grammarly AI',label:'Grammarly AI'},
+                {value:'Notion AI',label:'Notion AI'},
+                {value:'GitHub Copilot',label:'GitHub Copilot'},
+                {value:'Canva AI',label:'Canva AI'},
+                {value:'Midjourney / DALL·E',label:'Midjourney / DALL·E'},
+                {value:'AI nội bộ doanh nghiệp',label:'AI nội bộ doanh nghiệp'},
+                {value:'Khác',label:'Khác:'}],
+               otherField:{name:'q_info_12_other',placeholder:'Vui lòng ghi rõ...'}}
+             ]},
+            {type:'likert',id:'lp',varPrefix:'lp',sectionLabel:'PHẦN II',title:'HIỆU SUẤT HẬU CẦN (LP)',subtitle:'Đánh giá từ 1 – Hoàn toàn không đồng ý đến 5 – Hoàn toàn đồng ý',scale:5,
+             questions:[
+              'Hệ thống logistics đảm bảo giao hàng đúng thời gian cam kết.',
+              'Tỷ lệ đơn hàng được xử lý chính xác (đúng số lượng, đúng sản phẩm) là cao.',
+              'Hệ thống logistics có khả năng phản hồi nhanh với các thay đổi về nhu cầu khách hàng.',
+              'Hoạt động logistics được thực hiện với chi phí tối ưu so với hiệu quả đạt được.',
+              'Hệ thống cho phép theo dõi và minh bạch thông tin vận chuyển theo thời gian thực.',
+              'Dịch vụ logistics đáp ứng tốt kỳ vọng của khách hàng về độ tin cậy và tính nhất quán.',
+              'Tổng thể, hoạt động logistics góp phần cải thiện hiệu suất kinh doanh của tổ chức.']},
+            {type:'likert',id:'res',varPrefix:'res',sectionLabel:'PHẦN III',title:'HIỆU SUẤT PHỤC HỒI (RES)',subtitle:'Đánh giá từ 1 – Hoàn toàn không đồng ý đến 5 – Hoàn toàn đồng ý',scale:5,
+             questions:[
+              'Khi AI đưa ra kết quả sai hoặc không phù hợp, tôi có thể nhanh chóng điều chỉnh cách làm việc để vẫn tiếp tục nhiệm vụ hiệu quả.',
+              'Khi công cụ AI thay đổi hành vi, giao diện, hoặc chất lượng phản hồi, tôi có thể thích nghi mà không làm gián đoạn đáng kể công việc.',
+              'Ngay cả khi AI gây hiểu nhầm hoặc bỏ sót thông tin, tôi vẫn có thể duy trì phối hợp hiệu quả bằng cách kiểm tra, làm rõ, và hiệu chỉnh đầu ra.',
+              'Tôi có thể chuyển linh hoạt giữa hỗ trợ của AI và phán đoán của bản thân khi tình huống yêu cầu.',
+              'Sau những trải nghiệm không tốt với AI, tôi vẫn có thể lấy lại cách sử dụng phù hợp thay vì từ bỏ hoặc phụ thuộc mù quáng.',
+              'Làm việc với AI giúp tôi học từ gián đoạn và cải thiện cách cộng tác của mình trong các nhiệm vụ sau.']},
+            {type:'likert',id:'ep',varPrefix:'ep',sectionLabel:'PHẦN IV',title:'HIỆU SUẤT MÔI TRƯỜNG (EP)',subtitle:'Đánh giá từ 1 – Hoàn toàn không đồng ý đến 5 – Hoàn toàn đồng ý',scale:5,
+             questions:[
+              'Sự cộng tác giữa con người và AI giúp tổ chức của chúng tôi xác định các rủi ro môi trường và đưa ra các quyết định xanh dựa trên dữ liệu.',
+              'Các công cụ AI trong tổ chức của chúng tôi cung cấp phản hồi theo thời gian thực giúp giảm tiêu thụ năng lượng và tác động môi trường.',
+              'Sự cộng tác giữa con người và AI giúp tổ chức chúng tôi đáp ứng hiệu quả hơn các yêu cầu tuân thủ quy định môi trường.',
+              'Ban lãnh đạo tổ chức sử dụng các công cụ AI để thiết lập và giám sát các mục tiêu bảo vệ môi trường và tuân thủ quy định.',
+              'Tổ chức của chúng tôi chủ động sử dụng AI kết hợp với giám sát của con người để theo dõi và giảm thiểu tiêu thụ năng lượng.',
+              'Sự cộng tác giữa con người và AI đã giúp tổ chức phát triển các giải pháp xanh sáng tạo và cải thiện các thực hành bền vững.']},
+            {type:'likert',id:'sp',varPrefix:'sp',sectionLabel:'PHẦN V',title:'HIỆU SUẤT BỀN VỮNG (SP)',subtitle:'Đánh giá từ 1 – Hoàn toàn không đồng ý đến 5 – Hoàn toàn đồng ý',scale:5,
+             questions:[
+              'Doanh nghiệp chúng tôi đã giảm tác động tiêu cực đến môi trường thông qua việc tiết kiệm năng lượng, tài nguyên và giảm chất thải.',
+              'Doanh nghiệp chúng tôi đã cải thiện hiệu quả việc tuân thủ và quản lý các yêu cầu liên quan đến môi trường.',
+              'Doanh nghiệp chúng tôi đã nâng cao phúc lợi, điều kiện làm việc và sự phát triển của người lao động.',
+              'Doanh nghiệp chúng tôi tạo ra giá trị tích cực hơn cho khách hàng, cộng đồng và các bên liên quan.',
+              'Việc theo đuổi phát triển bền vững đã giúp doanh nghiệp chúng tôi cải thiện hiệu quả chi phí và hiệu quả hoạt động tổng thể.',
+              'Các hoạt động bền vững đã góp phần nâng cao năng lực cạnh tranh và kết quả kinh doanh dài hạn của doanh nghiệp.']}
+        ]
+    };
+    </script>
+    <script src="survey-engine.js"></script>
+    <style>
+      .se-banner{height:auto!important;object-fit:contain!important;}
+      .se-header{background:#fff!important;}
+      .se-header-content{background:#fff!important;margin-top:0!important;position:static!important;}
+      .se-header h1{color:var(--primary)!important;}
+      .se-header .se-subtitle{color:var(--text)!important;}
+    </style>
+</head>
+<body></body>
+</html>
