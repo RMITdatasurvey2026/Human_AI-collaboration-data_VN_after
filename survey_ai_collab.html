@@ -10,10 +10,10 @@
     window.SURVEY_CONFIG = {
         storageKey:    'survey_ai_collab',
         spreadsheetId: '',
-        orgBadge:        'VIN UNIVERSITY – RMIT VIETNAM',
+      //  orgBadge:        'VIN UNIVERSITY – RMIT VIETNAM',
         headerTitle:     'KHẢO SÁT SỰ HỢP TÁC GIỮA CON NGƯỜI VÀ TRÍ TUỆ NHÂN TẠO TRONG DOANH NGHIỆP',
-        headerDetail:    'Khảo sát về Sự hợp tác giữa Con người và AI trong Môi trường Doanh nghiệp',
-        headerSubtitle:  'Chúng tôi là nhóm nghiên cứu đến từ VinUniversity và RMIT University Vietnam. Mời Anh/Chị điền vào bảng câu hỏi sau. Phản hồi của Anh/Chị là vô cùng quan trọng đối với chúng tôi.',
+      //  headerDetail:    'Khảo sát về Sự hợp tác giữa Con người và AI trong Môi trường Doanh nghiệp',
+      //  headerSubtitle:  'Chúng tôi là nhóm nghiên cứu đến từ VinUniversity và RMIT University Vietnam. Mời Anh/Chị điền vào bảng câu hỏi sau. Phản hồi của Anh/Chị là vô cùng quan trọng đối với chúng tôi.',
         banner:          'human-and-AI-collaboration_EDIT.jpg',
         showEmail:                true,
         requireEmail:             true,
@@ -29,24 +29,24 @@
         requireConsent:           true,
         requiredMessage:          'Vui lòng trả lời tất cả các câu hỏi bắt buộc.',
         submitLabel:   '✓  Gửi KHẢO SÁT',
-        thankYouTitle: 'CẢM ƠN ANH/CHỊ RẤT NHIỀU!',
+        thankYouTitle: 'CHÂN THÀNH CẢM ƠN CÁC ANH/CHỊ ĐÃ ĐÓNG GÓP QUAN TRỌNG VÀO NGHIÊN CỨU CỦA CHÚNG TÔI!',
         thankYouBody:  'Phản hồi của bạn đã được ghi nhận thành công.<br>Dữ liệu sẽ được sử dụng phục vụ nghiên cứu.',
-        introBox: {
-            title: 'PHẦN I: GIỚI THIỆU NGHIÊN CỨU VÀ BỐI CẢNH',
-            html: `<p><strong>(A) Giới thiệu</strong></p>
-<p>Kính gửi Anh/Chị,</p>
-<p>Chúng tôi là nhóm nghiên cứu đến từ VinUniversity và RMIT University Vietnam, hiện đang thực hiện một nghiên cứu học thuật về <strong>Sự hợp tác giữa Con người và Trí tuệ Nhân tạo (AI)</strong> trong môi trường tổ chức và doanh nghiệp.</p>
-<p>Nghiên cứu này nhằm khám phá cách nhân viên và tổ chức đang ứng dụng các công nghệ AI trong công việc hàng ngày, cũng như cách con người tương tác, cộng tác và ra quyết định cùng với AI trong bối cảnh chuyển đổi số và tiến bộ công nghệ nhanh chóng.</p>
-<p><strong>(B) Bảo mật và Cam kết</strong></p>
-<p>Khảo sát này được thực hiện hoàn toàn vì mục đích học thuật. Không có câu trả lời đúng hay sai. Mọi thông tin thu thập sẽ được bảo mật và chỉ sử dụng cho mục đích nghiên cứu. Dữ liệu sẽ được phân tích tổng hợp và không có thông tin cá nhân nào bị tiết lộ.</p>
-<p>Mọi phản hồi hoặc câu hỏi, vui lòng liên hệ GS. Hong Bui tại <a href="mailto:Hong.btm@vinuni.edu.vn">Hong.btm@vinuni.edu.vn</a></p>`
-        },
+     //   introBox: {
+       //     title: 'PHẦN I: GIỚI THIỆU NGHIÊN CỨU VÀ BỐI CẢNH',
+          //  html: `<p><strong>(A) Giới thiệu</strong></p>
+//<p>Kính gửi Anh/Chị,</p>
+//<p>Chúng tôi là nhóm nghiên cứu đến từ VinUniversity và RMIT University Vietnam, hiện đang thực hiện một nghiên cứu học thuật về <strong>Sự hợp tác giữa Con người và Trí tuệ Nhân tạo (AI)</strong> trong môi trường tổ chức và doanh nghiệp.</p>
+//<p>Nghiên cứu này nhằm khám phá cách nhân viên và tổ chức đang ứng dụng các công nghệ AI trong công việc hàng ngày, cũng như cách con người tương tác, cộng tác và ra quyết định cùng với AI trong bối cảnh chuyển đổi số và tiến bộ công nghệ nhanh chóng.</p>
+//<p><strong>(B) Bảo mật và Cam kết</strong></p>
+//<p>Khảo sát này được thực hiện hoàn toàn vì mục đích học thuật. Không có câu trả lời đúng hay sai. Mọi thông tin thu thập sẽ được bảo mật và chỉ sử dụng cho mục đích nghiên cứu. Dữ liệu sẽ được phân tích tổng hợp và không có thông tin cá nhân nào bị tiết lộ.</p>
+//<p>Mọi phản hồi hoặc câu hỏi, vui lòng liên hệ GS. Hong Bui tại <a href="mailto:Hong.btm@vinuni.edu.vn">Hong.btm@vinuni.edu.vn</a></p>`
+  //      },
         sections: [
             {type:'demographics',id:'info',sectionLabel:'PHẦN I',title:'THÔNG TIN CƠ BẢN',
              questions:[
               {id:'q_info_1',required:true,text:'Giới tính',type:'radio',layout:3,
                options:[{value:'Nam',label:'Nam'},{value:'Nữ',label:'Nữ'},{value:'Khác',label:'Khác'}]},
-              {id:'q_info_2',required:true,text:'Độ tuổi',type:'number',min:18,step:1,placeholder:'Ví dụ: 25 (tối thiểu 18)'},
+              {id:'q_info_2',required:true,text:'Năm sinh',type:'number',min:1950,max:2008,step:1,placeholder:'Ví dụ: 1998 (từ 1950 đến 2008)'},
               {id:'q_info_3',required:true,text:'Chức vụ hiện tại của Anh/Chị trong tổ chức là gì?',type:'radio',layout:3,
                options:[
                 {value:'Giám đốc điều hành (CEO)',label:'Giám đốc điều hành (CEO)'},
@@ -77,6 +77,7 @@
                 {value:'50 - 249 nhân sự',label:'50 – 249 nhân sự'},
                 {value:'250 - 999 nhân sự',label:'250 – 999 nhân sự'},
                 {value:'1000+ nhân sự',label:'1000+ nhân sự'}]},
+                 /*
               {id:'q_info_6',required:true,text:'Doanh nghiệp Anh/Chị có doanh thu hàng năm khoảng bao nhiêu?',type:'radio',layout:2,
                options:[
                 {value:'Dưới 3 tỷ VND',label:'Dưới 3 tỷ VND'},
@@ -124,6 +125,7 @@
                 {value:'AI nội bộ doanh nghiệp',label:'AI nội bộ doanh nghiệp'},
                 {value:'Khác',label:'Khác:'}],
                otherField:{name:'q_info_12_other',placeholder:'Vui lòng ghi rõ...'}}
+               */
              ]},
             {type:'likert',id:'lp',varPrefix:'lp',sectionLabel:'PHẦN II',title:'HIỆU SUẤT HẬU CẦN',subtitle:'Đánh giá từ 1 – Hoàn toàn không đồng ý đến 5 – Hoàn toàn đồng ý',scale:5,
              questions:[
