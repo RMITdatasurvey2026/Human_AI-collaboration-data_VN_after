@@ -211,16 +211,20 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg
 @keyframes seSpin{to{transform:rotate(360deg)}}
 
 @media(max-width:640px){
+  body{padding-bottom:80px;}
   .se-container{padding:12px;}
   .se-header h1{font-size:15px;}
   .se-section-body{padding:16px;}
   .se-likert{flex-wrap:wrap;padding-left:0;}
-  .se-likert .lk-end{min-width:auto;width:100%;text-align:left;padding:0 0 4px;}
+  .se-likert .lk-end.left{min-width:auto;width:100%;text-align:left;padding:0 0 4px;}
+  .se-likert .lk-end.right{min-width:auto;width:100%;text-align:right;padding:4px 0 0;}
+  .se-likert-opts{width:100%;justify-content:center;}
   .se-options{padding-left:0;}
   .se-options.cols-3,.se-options.cols-4{grid-template-columns:repeat(2,1fr);}
   .se-options.cols-2{grid-template-columns:1fr;}
   .se-other-input{padding-left:0;}
-  .se-admin-panel{width:100%;}
+  .se-admin-panel{width:100%;max-width:100%;}
+  .se-admin-toggle{bottom:16px;right:16px;}
   .se-scale-legend{gap:2px;}
   .se-scale-item .lbl{font-size:9px;}
 }`;
